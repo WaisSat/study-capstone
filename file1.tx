@@ -1,0 +1,2 @@
+echo "Welcome to Github" > file.tx
+ls file1.tx
