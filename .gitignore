@@ -1,0 +1,16 @@
+# Secrets and Credentials
+.env
+*.pem
+*.key
+secrets.json
+
+# DevOps/System files
+node_modules/
+dist/
+build/
+.DS_Store
+Thumbs.db
+
+# OS specific
+.vscode/
+.idea/
