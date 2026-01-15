@@ -1,0 +1,29 @@
+- name: Install httpd 
+  yum: 
+    name: httpd 
+    state: present 
+ 
+- name: Enable and start httpd 
+  service: 
+    name: httpd 
+    state: started 
+    enabled: true 
+ 
+- name: Deploy application page 
+  template: 
+    src: index.html.j2 
+    dest: /var/www/html/index.html 
+    owner: root 
+    group: root 
+    mode: '0644' 
+ 
+- name: httpd restart 
+  service: 
+    name: httpd 
+    state: restarted 
+ 
+- name: stopping firewall 
+  service: 
+    name: firewalld 
+    state: stopped 
+

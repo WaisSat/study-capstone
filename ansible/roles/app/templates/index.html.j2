@@ -1,0 +1,8 @@
+<h1>Enterprise CI/CD Deployment</h1> 
+<hr> 
+<p><b>Environment:</b> LAB</p> 
+<p><b>Deployed by:</b> Jenkins</p> 
+<p><b>Build Number:</b> {{ lookup('env','BUILD_NUMBER') | default('manual') }}</p> 
+<p><b>Git Commit:</b> {{ lookup('env','GIT_COMMIT') | default('unknown') }}</p> 
+<p><b>Timestamp:</b> {{ ansible_date_time.iso8601 }}</p> 
+
